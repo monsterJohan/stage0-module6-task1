@@ -34,22 +34,22 @@ public class Animal {
         this.hasFur = hasFur;
     }
     public String getDescription() {
-        String description = "";
+        String description;
         String repeatedString = "This animal is mostly ";
         if(getNumberOfPaws() != 1) {
             if (getHasFur()) {
-                description = "This animal is mostly " + getColor() + ". It has " +
+                description = repeatedString + getColor() + ". It has " +
                         getNumberOfPaws() + " paws and a fur.";
             } else {
-                description = "This animal is mostly " + getColor() + ". It has " +
+                description = repeatedString + getColor() + ". It has " +
                         getNumberOfPaws() + " paws and no fur.";
             }
         } else {
             if (getHasFur()) {
-                description = "This animal is mostly " + getColor() + ". It has " +
+                description = repeatedString + getColor() + ". It has " +
                         getNumberOfPaws() + " paw and a fur.";
             } else {
-                description = "This animal is mostly " + getColor() + ". It has " +
+                description = repeatedString + getColor() + ". It has " +
                         getNumberOfPaws() + " paw and no fur.";
             }
         }
