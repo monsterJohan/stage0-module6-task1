@@ -35,23 +35,18 @@ public class Animal {
     }
     public String getDescription() {
         String description = "";
-        String repeatedString = "This animal is mostly ";
-        if (getNumberOfPaws() != 1) {
-            if (getHasFur()) {
-                description = repeatedString + getColor() + ". It has " +
-                        getNumberOfPaws() + " paws and a fur.";
-            } else {
-                description = repeatedString + getColor() + ". It has " +
-                        getNumberOfPaws() + " paws and no fur.";
-            }
+        if(getHasFur() && getNumberOfPaws() == 1) {
+            description = "This animal is mostly " + getColor() + ". It has " +
+                    getNumberOfPaws() + " paw and a fur.";
+        } else if (getHasFur() && getNumberOfPaws() == 1){
+            description = "This animal is mostly " + getColor() + ". It has " +
+                    getNumberOfPaws() + " paw and no fur.";
+        } else if (getHasFur()) {
+            description = "This animal is mostly " + getColor() + ". It has " +
+                    getNumberOfPaws() + " paws and a fur.";
         } else {
-            if (getHasFur()) {
-                description = repeatedString + getColor() + ". It has " +
-                        getNumberOfPaws() + " paw and a fur.";
-            } else {
-                description = repeatedString + getColor() + ". It has " +
-                        getNumberOfPaws() + " paw and no fur.";
-            }
+            description = "This animal is mostly " + getColor() + ". It has " +
+                    getNumberOfPaws() + " paws and no fur.";
         }
 
         return  description;
